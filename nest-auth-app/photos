@@ -1,0 +1,68 @@
+nest g resource auth --no-spec
+nest g resource users --no-spec
+nest g resource roles --no-spec
+nest g resource permissions --no-spec
+nest g resource posts --no-spec
+nest g resource comments --no-spec
+ What transport layer do you use? (Use arrow keys)
+> REST API
+  GraphQL (code first)
+  GraphQL (schema first)
+  Microservice (non-HTTP)
+  WebSockets
+PS E:\E-Book\nest-auth-app> nest g resource auth --no-spec
+? What transport layer do you use? REST API
+? Would you like to generate CRUD entry points? (Y/n) y
+
+prisma
+npm install prisma --save-dev
+npx prisma init
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/nest_auth"
+
+model User {
+  id       String   @id @default(uuid())
+  email    String   @unique
+  password String
+  roles    Role[]   @relation("UserRoles")
+  posts    Post[]
+  comments Comment[]
+}
+
+model Role {
+  id          String       @id @default(uuid())
+  name        String       @unique
+  permissions Permission[] @relation("RolePermissions")
+  users       User[]       @relation("UserRoles")
+}
+
+model Permission {
+  id    String @id @default(uuid())
+  name  String @unique
+  roles Role[] @relation("RolePermissions")
+}
+
+model Post {
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  comments  Comment[]
+  createdAt DateTime @default(now())
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  content   String
+  postId    String
+  authorId  String
+  post      Post     @relation(fields: [postId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+npx prisma migrate dev --name init
+
+ nest g service prisma --no-spec
+ nest g module prisma --no-spec
+ npm install class-validator class-transformer
