@@ -12,22 +12,22 @@ export class UsersService {
   ) {}
 
   async create(createUserDto: CreateUserDto) {
-    const { password, ...userData } = createUserDto;
-
+    const { password, role, ...userData } = createUserDto;
     const passwordHash = await this.Crypt.hash(password);
 
-    const DEFAULT_ROLE_ID = '503935ce-c284-4498-a93d-c43e527f787e';
+    const data: any = {
+      ...userData,
+      password: passwordHash,
+    };
 
-    const rolesToConnect = createUserDto.role || DEFAULT_ROLE_ID;
+    if (role) {
+      data.role = {
+        connect: { id: role },
+      };
+    }
 
     return await this.prisma.user.create({
-      data: {
-        ...userData,
-        password: passwordHash,
-        role: {
-          connect: { id: rolesToConnect }, // Conecta ambas as permissões
-        },
-      },
+      data,
       include: {
         role: true,
       },
@@ -67,23 +67,26 @@ export class UsersService {
       return null;
     }
 
-    const { password, ...userData } = updateUserDto;
+    const { password, role, ...userData } = updateUserDto;
 
-    const passwordHash = await this.Crypt.hash(password);
+    const dataToUpdate: any = {
+      ...userData,
+    };
 
-    const DEFAULT_ROLE_ID = '503935ce-c284-4498-a93d-c43e527f787e';
+    if (password) {
+      const passwordHash = await this.Crypt.hash(password);
+      dataToUpdate.password = passwordHash;
+    }
 
-    const rolesToConnect = updateUserDto.role || DEFAULT_ROLE_ID;
+    if (role) {
+      dataToUpdate.role = {
+        connect: { id: role },
+      };
+    }
 
     return await this.prisma.user.update({
       where: { id },
-      data: {
-        ...userData,
-        password: passwordHash,
-        role: {
-          connect: { id: rolesToConnect }, // Conecta ambas as permissões
-        },
-      },
+      data: dataToUpdate,
       include: {
         role: true,
       },

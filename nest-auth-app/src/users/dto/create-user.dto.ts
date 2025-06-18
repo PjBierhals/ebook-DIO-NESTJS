@@ -12,5 +12,5 @@ export class CreateUserDto {
   password: string;
 
   @IsOptional()
-  role?: string; // Array de nomes de papéis (ex: ['admin', 'editor'])
+  role?: string;
 }
