@@ -30,7 +30,7 @@ npm install
 
 3. **Configure o arquivo `.env`:**
 
-Crie um arquivo `.env` na raiz com o conteúdo:
+Altere arquivo `.env` na raiz com o conteúdo:
 
 ```env
 DATABASE_URL="postgresql://usuario:senha@localhost:5432/nest_auth"
@@ -84,16 +84,6 @@ Um arquivo `.json` com requisições prontas pode ser importado no Insomnia (ou 
 
 ## 📘 Documentação
 
-Leia o [eBook Autenticação e Autorização em NestJS](./ebook.pdf) incluído neste projeto para entender a implementação passo a passo, com explicações conceituais e práticas.
+Leia o [eBook Autenticação e Autorização em NestJS](./nestAuth.pdf) incluído neste projeto para entender a implementação passo a passo, com explicações conceituais e práticas.
 
----
 
-## 🧑‍💻 Contribuição
-
-Pull requests são bem-vindos! Para grandes mudanças, abra uma issue primeiro para discutir o que você gostaria de modificar.
-
----
-
-## 📝 Licença
-
-[MIT](LICENSE)
