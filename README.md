@@ -84,6 +84,6 @@ Um arquivo `.json` com requisições prontas pode ser importado no Insomnia (ou 
 
 ## 📘 Documentação
 
-Leia o [eBook Autenticação e Autorização em NestJS](./nestAuth.pdf) incluído neste projeto para entender a implementação passo a passo, com explicações conceituais e práticas.
+Leia o [eBook Autenticação e Autorização em NestJS](./Ebook/nestAuth.pdf) incluído neste projeto para entender a implementação passo a passo, com explicações conceituais e práticas.
 
 
