@@ -70,31 +70,7 @@ Um arquivo `.json` com requisições prontas pode ser importado no Insomnia (ou 
 
 ---
 
-## 📂 Estrutura de Pastas (exemplo)
 
-```
-src/
-├── auth/
-│   ├── auth.module.ts
-│   ├── auth.service.ts
-│   ├── auth.controller.ts
-│   └── strategies/
-│       └── jwt.strategy.ts
-├── users/
-├── posts/
-├── comments/
-├── roles/
-├── permissions/
-├── prisma/
-│   └── prisma.service.ts
-├── common/
-│   └── guards/
-│       └── permissions.guard.ts
-│   └── decorators/
-│       └── permissions.decorator.ts
-```
-
----
 
 ## ✅ Recursos Incluídos
 
