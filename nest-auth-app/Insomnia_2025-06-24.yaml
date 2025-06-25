@@ -1,0 +1,493 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_e27d5ee29fda45a98f2ca884dfe4343f
+  created: 1749557114077
+  modified: 1749557114077
+  description: ""
+collection:
+  - name: Permissions
+    meta:
+      id: fld_71348cd984d84e368e2477179b5e7b1d
+      created: 1749557465547
+      modified: 1749557465547
+      sortKey: -1749557465547
+      description: ""
+    children:
+      - url: http://localhost:3000/permissions/
+        name: ALL
+        meta:
+          id: req_1dc1fd4d485e479581551d0af0ec782f
+          created: 1749557114415
+          modified: 1750205038114
+          isPrivate: false
+          description: ""
+          sortKey: -1749557470690
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vcmRvY2suY29tbUBleGFtcGxlLmNvbSIsInN1YiI6IjkxN2E1Njk4LTNlOTQtNGIzYS04MGZjLTM2YzEyOGY4NWQzNCIsInJvbGUiOiJBRE1JTiIsInBlcm1pc3Npb25zIjpbIkNSSUFSIiwiQUxURVJBUiIsIkRFTEVUQVIiLCJMRVIiXSwiaWF0IjoxNzUwMjAxODYyLCJleHAiOjE3NTAyMDU0NjJ9.XC_mMs0HzrBlvhwQer65RaV6BLKZsOL4C5GWCZ9oXYU
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/permissions
+        name: CREATE
+        meta:
+          id: req_ba4c652fdebb4f8ba2f5bccbb8f7d20e
+          created: 1749557522546
+          modified: 1750195031988
+          isPrivate: false
+          description: ""
+          sortKey: -1749557522546
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"DELETAR"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/permissions/a7038682-71ba-488d-81ed-1b5e54e83e10
+        name: FIND
+        meta:
+          id: req_519f41c432164f9786943943e73ed392
+          created: 1749557680987
+          modified: 1749557695929
+          isPrivate: false
+          description: ""
+          sortKey: -1744692796923.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/permissions/a9c4f2ad-b938-4b26-9654-31407add84f9
+        name: UPDATE
+        meta:
+          id: req_42924cf15ecc4a518db9886bdf580e73
+          created: 1749557741906
+          modified: 1750195076785
+          isPrivate: false
+          description: ""
+          sortKey: -1749557496618
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"LER"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/permissions/7a449990-834d-4c02-99ca-0d6a875e9ee0
+        name: DELETE
+        meta:
+          id: req_6a0a964d6b694dcc9509f0b9f5a0b48d
+          created: 1749866592672
+          modified: 1749866609722
+          isPrivate: false
+          description: ""
+          sortKey: -1743476628481.875
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Roles
+    meta:
+      id: fld_daef0a5f23504f27b607ca31d27b1800
+      created: 1749560729744
+      modified: 1749560729744
+      sortKey: -1735111214611.5
+      description: ""
+    children:
+      - url: http://localhost:3000/roles
+        name: ALL
+        meta:
+          id: req_fdb8f3252df445358249b6548e6d9453
+          created: 1749560729745
+          modified: 1750208200923
+          isPrivate: false
+          description: ""
+          sortKey: -1749557470690
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzdWFyaW9AZXhhbXBsZS5jb20iLCJzdWIiOiI5NjhkYTVkZi1kMmI4LTQ4MmUtOWYzYi01M2JjOTRjODIyNTQiLCJyb2xlIjoiVVNVQVJJTyIsInBlcm1pc3Npb25zIjpbIkxFUiJdLCJpYXQiOjE3NTAyMDgxODIsImV4cCI6MTc1MDIxMTc4Mn0.vC2wvY7awRVRYvQ_KFszE3hcqpQyS9wP4HfaERTyHFs
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/roles
+        name: CREATE
+        meta:
+          id: req_3b64fb57fc1647caade5b22396c9a3c5
+          created: 1749560729747
+          modified: 1750198103112
+          isPrivate: false
+          description: ""
+          sortKey: -1749557522546
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"GESTOR",
+            	"permissions":[
+            		"01b711e5-dd14-4bc7-ac01-a14c724e6d47",
+            	 	"a9c4f2ad-b938-4b26-9654-31407add84f9"	]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/roles/13c23faa-495a-4930-8010-ea3daeff4983
+        name: FIND
+        meta:
+          id: req_a2e5000d35c5410e98f9fb62143589ae
+          created: 1749560729749
+          modified: 1749572208369
+          isPrivate: false
+          description: ""
+          sortKey: -1744692796923.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/roles/13c23faa-495a-4930-8010-ea3daeff4983
+        name: UPDATE
+        meta:
+          id: req_8f303854134446bf804127f23cf2ccfa
+          created: 1749560729750
+          modified: 1749572526688
+          isPrivate: false
+          description: ""
+          sortKey: -1749557496618
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"GESTER",
+            	"permissions":["31cd5396-0e09-48bf-ac8e-8a8f58074ceb"
+
+            ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/roles/313b7693-a473-4014-b141-a7d2874f86d8
+        name: DELETE
+        meta:
+          id: req_4f891f37bfd94487a8052f6e33d5e10f
+          created: 1749866657734
+          modified: 1750196564032
+          isPrivate: false
+          description: ""
+          sortKey: -1744084712702.6875
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Users
+    meta:
+      id: fld_c2e2d144531d4dc3a83e9cd15da75f3d
+      created: 1749576240966
+      modified: 1749576240966
+      sortKey: -1727888089143.75
+      description: ""
+    children:
+      - url: http://localhost:3000/users
+        name: ALL
+        meta:
+          id: req_25a5c59f29804e8290c642ee3ca95a27
+          created: 1749576240967
+          modified: 1750201874779
+          isPrivate: false
+          description: ""
+          sortKey: -1749557470690
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vcmRvY2suY29tbUBleGFtcGxlLmNvbSIsInN1YiI6IjkxN2E1Njk4LTNlOTQtNGIzYS04MGZjLTM2YzEyOGY4NWQzNCIsInJvbGUiOiJBRE1JTiIsInBlcm1pc3Npb25zIjpbIkNSSUFSIiwiQUxURVJBUiIsIkRFTEVUQVIiLCJMRVIiXSwiaWF0IjoxNzUwMjAxODYyLCJleHAiOjE3NTAyMDU0NjJ9.XC_mMs0HzrBlvhwQer65RaV6BLKZsOL4C5GWCZ9oXYU
+          prefix: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users
+        name: CREATE
+        meta:
+          id: req_37e9901158a548c99d44d705151f7c18
+          created: 1749576240969
+          modified: 1750200660476
+          isPrivate: false
+          description: ""
+          sortKey: -1749557522546
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Usuario",
+              "email": "usuario@example.com",
+              "password": "SenhaSegura123!",
+              "role": "8efff076-aefd-421f-a2e4-2c58fd338889"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/4a57be1f-74e5-4cc5-a441-2aa6f22078e5
+        name: FIND
+        meta:
+          id: req_2be041ca4e61492e8ce873717e6a49a9
+          created: 1749576240971
+          modified: 1749606004304
+          isPrivate: false
+          description: ""
+          sortKey: -1744692796923.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/4a57be1f-74e5-4cc5-a441-2aa6f22078e5
+        name: UPDATE
+        meta:
+          id: req_8eeb33db41764c068326b50fb58a0888
+          created: 1749576240972
+          modified: 1750200567291
+          isPrivate: false
+          description: ""
+          sortKey: -1749557496618
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Usuario",
+              "email": "usuario@example.com",
+              "password": "SenhaSegura123!",
+              "role": "8efff076-aefd-421f-a2e4-2c58fd338889"
+
+
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/by-email/mordock.comm@example.com
+        name: FINDEMAIL
+        meta:
+          id: req_40bb7347ae8b425ba0cbf8b54de36212
+          created: 1749606766666
+          modified: 1749611923270
+          isPrivate: false
+          description: ""
+          sortKey: -1742260460040.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: DELETE
+        meta:
+          id: req_a8d3f0a1ed4e45828052040041a25557
+          created: 1750197835672
+          modified: 1750197863106
+          isPrivate: false
+          description: ""
+          sortKey: -1742260459940.25
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Authentication
+    meta:
+      id: fld_e8ec03e00e554b6bac9cec49a9446a8f
+      created: 1749611455698
+      modified: 1750203028621
+      sortKey: -1749611455698
+      description: ""
+    children:
+      - url: http://localhost:3000/auth/login
+        name: Login
+        meta:
+          id: req_d1c273a00eb14e4e974cad9e0bbe32ad
+          created: 1749611458973
+          modified: 1750208119185
+          isPrivate: false
+          description: ""
+          sortKey: -1749611458973
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "usuario@example.com",
+              "password": "SenhaSegura123!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1007c8ca988808346de8c026b474a3d46f262f98
+    created: 1749557114083
+    modified: 1749557114083
+environments:
+  name: Base Environment
+  meta:
+    id: env_1007c8ca988808346de8c026b474a3d46f262f98
+    created: 1749557114080
+    modified: 1749557114080
+    isPrivate: false
